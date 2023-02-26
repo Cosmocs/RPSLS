@@ -1,27 +1,40 @@
 import random
 
-while True:
-    user_choice = input("Enter a choice (rock, paper, scissors, lizzard, spock): ")
+print("Let's Play Rock, Paper, Scissors, Lizard, Spock!")
+player = input("Enter a choice (rock, paper, scissors, lizzard, spock): ")
+choices = ["rock", "paper", "scissors", "lizzard", "spock"]
 
-    choices = ["rock", "paper", "scissors", "lzzard", "spock"]
-    computer_action = random.choice(choices)
-    print(f"\nYou chose {user_choice}, computer chose {computer_action}.\n")
+game_map = {0:"rock", 1:"paper", 2:"scissors", 3:"lizard", 4:"Spock"}
+rpsls_table = [[-1, 1, 0, 0, 4],[1, -1, 2, 3, 1], [0, 2, -1, 2, 4], [0, 3, 2, -1, 3], [4, 1, 4, 3, -1]]
 
-    if user_choice == computer_action:
-        print(f"Both players selected {user_choice}. It's a tie!")
-    elif user_choice == "rock":
-        if computer_action == "scissors":
-            print("Rock smashes scissors! You win!")
+
+print(f"\nYou chose {user_choice}, computer chose {computer_action}.\n")
+
+player = False
+
+while player == False:
+#set player to True
+    player = input("Rock, Paper, Scissors?")
+    if player == computer_action:
+        print("It's a tie!")
+    elif player == "Rock":
+        if computer_action == "Paper":
+            print("You lose!", computer_action, "covers", player)
         else:
-            print("Paper covers rock! You lose.")
-    elif user_choice == "paper":
-        if computer_action == "rock":
-            print("Paper covers rock! You win!")
+            print("You win!", player, "smashes", computer_action)
+    elif player == "Paper":
+        if computer_action == "Scissors":
+            print("You lose!", computer_action, "cut", player)
         else:
-            print("Scissors cuts paper! You lose.")
-    elif user_choice == "scissors":
-        if computer_action == "paper":
-            print("Scissors cuts paper! You win!")
+            print("You win!", player, "covers", computer_action)
+    elif player == "Scissors":
+        if computer == "Rock":
+            print("You lose...", computer, "smashes", player)
         else:
-            print("Rock smashes scissors! You lose.")
+            print("You win!", player, "cut", computer)
+    else:
+        print("That's not a valid play. Check your spelling!")
+    #player was set to True, but we want it to be False so the loop continues
+    player = False
+    computer = t[randint(0,2)]
 
