@@ -24,11 +24,19 @@ while player == False:
             print("You win!", player, "covers", computer_action)
     elif player == "Scissors":
         if computer_action == "Rock":
-            print("You lose...", computer_action, "smashes", player)
+            print("You lose!", computer_action, "smashes", player)
         else:
             print("You win!", player, "cut", computer_action)
     elif player == "lizzard":
-        if com
+        if computer_action == "spock":
+            print("You win!", player, "poisons", computer_action)
+        else:
+            print("You lose!", computuer_action, "poisons", player)
+    elif player == "spock"
+        if computer_action == "rock"
+            print("You win!", player, "crushes", computer_action)
+        else:
+             print("You loose!", computer_action, "crushes", player)
     else:
         print("That's not a valid play. Check your spelling!")
     #player was set to True, but we want it to be False so the loop continues
