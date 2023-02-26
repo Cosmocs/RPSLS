@@ -5,7 +5,7 @@ while True:
 
     choices = ["rock", "paper", "scissors", "lzzard", "spock"]
     computer_action = random.choice(choices)
-    print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
+    print(f"\nYou chose {user_choice}, computer chose {computer_action}.\n")
 
     if user_choice == computer_action:
         print(f"Both players selected {user_choice}. It's a tie!")
