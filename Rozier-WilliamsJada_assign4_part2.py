@@ -2,7 +2,7 @@ import random
 player_points = 0
 comp_points = 0
 rounds = int(input("How many rounds would you like? "))
-for i in range(1, rounds):
+for i in range(rounds):
     print("Let's Play Rock, Paper, Scissors, Lizard, Spock!")
    
     player = input("Enter a choice (rock, paper, scissors, lizzard, spock): ")
@@ -86,6 +86,9 @@ for i in range(1, rounds):
             player += 1
     else:
         print("That's not a valid play. Check your spelling!")
-  
-    
 
+    print("Results: \n")
+    if player_points > comp_points:
+        print(f"Player Wins!\n Score: Player -{player_points} \n Computer - {comp_points}")
+    if comp_points > player_points:
+        print(f"Computer Wins!\n Score: Player -{player_points} \n Computer - {comp_points}")
