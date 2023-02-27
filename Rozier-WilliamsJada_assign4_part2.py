@@ -52,14 +52,38 @@ for i in range(1, rounds):
         if comp == "paper":
             print("You Win!", player, "cuts", comp,)
             player += 1
-     elif comp == "lizzard"
-         if player == "scissors"
+    elif comp == "lizzard":
+         if player == "scissors":
              print("You Win!", player, "decapitates", comp)
              player_points += 1
-    elif player == "lizzard"
-        if comp == "scissors"
+    elif player == "lizzard":
+        if comp == "scissors":
             print("You Lose!", comp, "decapitates", player)
             comp_points += 1
+    elif comp == "lizzard":
+        if player == "paper":
+            print("You Lose!", comp, "eats", player)
+            comp += 1
+    elif player == "lizzard":
+        if comp == "paper":
+            print("You Win!", player, "eats", comp)
+            player += 1
+    elif comp == "spock":
+        if player == "rock":
+            print("You Lose!", comp, "vaporizes", player)
+            comp += 1
+    elif player == "spock":
+        if comp == "rock":
+            print("You Win!", player, "vaporizes", comp)
+            player += 1
+    elif comp == "spock":
+        if player == "scissors":
+            print("You Lose!", comp, "smashes", player)
+            comp += 1
+    elif player == "spock":
+        if comp == "scissors":
+            print("You Win!", player, "smashes", comp)
+            player += 1
     else:
         print("That's not a valid play. Check your spelling!")
   
