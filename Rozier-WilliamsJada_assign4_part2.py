@@ -8,7 +8,7 @@ for i in range(1, rounds):
     player = input("Enter a choice (rock, paper, scissors, lizzard, spock): ")
     choices = ["rock", "paper", "scissors", "lizzard", "spock"]
     comp = random.choice(choices)
-    print(f"\nYou chose {player}, computer chose {computer_action}.\n")
+    print(f"\nYou chose {player}, computer chose {comp}.\n")
 
     if player == comp:
         print("It's a tie!")
@@ -27,25 +27,39 @@ for i in range(1, rounds):
     elif player == "lizzard":
         if comp == "rock":
             print("You Lose!", comp, "crushes", player)
-            comp_points +=
-    elif comp == "spock"
+            comp_points += 1
+    elif comp == "spock":
         if player == "paper":
             print("You Win!", player, "disapproves", comp)
             player_points += 1
-    elif player == "spock"
+    elif player == "spock":
         if comp == "paper":
             print("You Lose!", comp, "disapproves", player)
             comp_points += 1
-    elif player == "rock"
+    elif player == "rock":
         if comp == "paper":
             print("You Lose!", comp, "covers", player)
             comp_points += 1
-    elif comp == "rock"
+    elif comp == "rock":
         if player == "paper":
             print("You Win!", player, "covers", comp)
-            comp_points += 1    
-    
-        
+            comp_points += 1
+    elif comp == "scissors":
+        if player == "paper":
+            print("You Lose!", comp, "cuts", player,)
+            comp_points += 1
+    elif player == "scissors":
+        if comp == "paper":
+            print("You Win!", player, "cuts", comp,)
+            player += 1
+     elif comp == "lizzard"
+         if player == "scissors"
+             print("You Win!", player, "decapitates", comp)
+             player_points += 1
+    elif player == "lizzard"
+        if comp == "scissors"
+            print("You Lose!", comp, "decapitates", player)
+            comp_points += 1
     else:
         print("That's not a valid play. Check your spelling!")
   
