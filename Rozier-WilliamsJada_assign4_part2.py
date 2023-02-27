@@ -7,46 +7,45 @@ for i in range(1, rounds):
    
     player = input("Enter a choice (rock, paper, scissors, lizzard, spock): ")
     choices = ["rock", "paper", "scissors", "lizzard", "spock"]
-    computer_action = random.choice(choices)
+    comp = random.choice(choices)
     print(f"\nYou chose {player}, computer chose {computer_action}.\n")
 
-    if player == computer_action:
+    if player == comp:
         print("It's a tie!")
-    elif player == "Rock":
-        if computer_action == "Paper":
-            print("You lose!", computer_action, "covers", player)
+    elif player == "spock":
+        if comp == "lizzard":
+            print("You Lose!", comp, "poisons", player)
             comp_points += 1
-        else:
-            print("You win!", player, "smashes", computer_action)
+    elif comp == "spock":
+        if player == "lizzard":
+            print("You Win!", player, "poisons", comp)
             player_points += 1
-    elif player == "Paper":
-        if computer_action == "Scissors":
-            print("You lose!", computer_action, "cut", player)
-            comp_points += 1
-        elif computer_action == "rock":
-            print("You win!", player, "cuts", computer_action)
-            player_points += 1
-    elif player == "Scissors":
-        if computer_action == "Rock":
-            print("You lose!", computer_action, "smashes", player)
-            comp_points += 1
-        elif computer_action == "paper":
-            print("You win!", player, "cut", computer_action)
+    elif comp == "lizzard":
+        if player == "rock":
+            print("You Win!", player, "crushes", comp)
             player_points += 1
     elif player == "lizzard":
-        if computer_action == "spock":
-            print("You win!", player, "poisons", computer_action)
+        if comp == "rock":
+            print("You Lose!", comp, "crushes", player)
+            comp_points +=
+    elif comp == "spock"
+        if player == "paper":
+            print("You Win!", player, "disapproves", comp)
             player_points += 1
-        else:
-            print("You lose!", computuer_action, "poisons", player)
+    elif player == "spock"
+        if comp == "paper":
+            print("You Lose!", comp, "disapproves", player)
             comp_points += 1
-    elif player == "spock":
-        if computer_action == "rock":
-            print("You win!", player, "crushes", computer_action)
-            player_points += 1
-        else:
-             print("You lose!", computer_action, "crushes", player)
-             comp_points += 1
+    elif player == "rock"
+        if comp == "paper":
+            print("You Lose!", comp, "covers", player)
+            comp_points += 1
+    elif comp == "rock"
+        if player == "paper":
+            print("You Win!", player, "covers", comp)
+            comp_points += 1    
+    
+        
     else:
         print("That's not a valid play. Check your spelling!")
   
