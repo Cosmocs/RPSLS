@@ -2,7 +2,7 @@ import random
 player_points = 0
 comp_points = 0
 rounds = int(input("How many rounds would you like? "))
-for i in range(rounds):
+for i in range(1,rounds):
     print("Let's Play Rock, Paper, Scissors, Lizard, Spock!")
    
     player = input("Enter a choice (rock, paper, scissors, lizzard, spock): ")
